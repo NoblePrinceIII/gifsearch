@@ -19,31 +19,26 @@ def index():
 
     # TODO: Render the 'index.html' template, passing the gifs as a named parameter
 
-    return render_template("index.html")
+    return render_template("index.html", results = results)
+
 
 
 def get_results(query):
     # set the apikey and limit
-apikey = "3OGJ9M5CUDUK"  # test value
-limit = 10
-
-# our test search
-search_term = "excited"
+    apikey = "3OGJ9M5CUDUK"  # test value
+    limit = 10
 
 # get the top 10 GIFs for the search term
-r = requests.get(
+    r = requests.get(
     "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (query, apikey, limit))
 
-if r.status_code == 200:
-    # load the GIFs using the urls for the smaller GIF sizes
-    top_10gifs = json.loads(r.content)
-    print top_10gifs
-else:
-    top_10gifs = None
+    if r.status_code == 200:
+        # load the GIFs using the urls for the smaller GIF sizes
+        top_10gifs = json.loads(r.content)
+    else:
+        top_10gifs = None
 
-
-
-# continue a similar pattern until the user makes a selection or starts a new search.
+    return top_10gifs
 
 
 
