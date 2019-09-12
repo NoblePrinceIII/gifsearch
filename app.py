@@ -27,6 +27,12 @@ def get_results(query):
     # set the apikey and limit
     apikey = "3OGJ9M5CUDUK"  # test value
     limit = 10
+<<<<<<< HEAD
+=======
+
+# our test search
+search_term = "excited"
+>>>>>>> bbb297eb93fe4fc1592259a860f1b865daf7efb4
 
 # get the top 10 GIFs for the search term
     r = requests.get(
