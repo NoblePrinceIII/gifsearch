@@ -1,8 +1,12 @@
 body {
-    background: blue;
+    background: grey;
+}
+h1 {
+    color: gold
 }
 p {
     margin-top: -100px;
+    color: gold;
 }
 hr {
     color: royalblue;
