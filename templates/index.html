@@ -1,9 +1,12 @@
+{% extends 'base.html' %}
+
 <!DOCTYPE html>
+
 <html>
-    <link rel="stylesheet" href="index.css">
     <head>
+      <link href="{{ url_for( 'static', filename='index.css') }}" rel = 'stylesheet' type:'text/css'/>
         <title>
-            Gif Search
+                      Gif Search
         </title>
     </head>
     <body>

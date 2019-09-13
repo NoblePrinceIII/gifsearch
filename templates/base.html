@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,5 +11,30 @@
 
     <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
     <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <link href="{{ url_for( 'static', filename='index.css') }}" rel = 'stylesheet' type:'text/css'/>
+
+
+
+
+    <Center>
+        <h1 style="font-size: 150px;">Dorm Room Comedy</h1>
+        <p style="font-size: 50px;"><em><strong>"Laugh while you search"</strong></em></p>
+        <hr style="height:5px;border:none;color:red;background-color:lightblue;"/>
+        <div id="cover" style="margin-top:-50px;">
+            <form method="get" action="">
+              <div class="tb">
+                <div class="td"><input type="text" placeholder="GIF Search..." required></div>
+                <div class="td" id="s-cover">
+                  <button type="submit">
+                    <div id="s-circle"></div>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+    </Center>
+
+
 </body>
 </html>

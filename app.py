@@ -19,7 +19,7 @@ def index():
 
     # TODO: Render the 'index.html' template, passing the gifs as a named parameter
 
-    return render_template("index.html", results = results)
+    return render_template('index.html', results = results)
 
 
 def get_results(query):
