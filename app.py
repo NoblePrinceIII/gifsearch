@@ -7,11 +7,15 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Return homepage."""
-    query = request.args.get("search gif")
-    results = get_results(query)
+    query = request.args.get("search_gif")
+    payload = {
+        "q" : query,
+        "key" : "3OGJ9M5CUDUK"
+    }
 
-
-    return render_template("index.html", results = results)
+    r = requests.get( "https://api.tenor.com/v1/search?", params = payload)
+    data = r.json()
+    return render_template("index.html", data = data)
 
 
 @app.route('/submit')
@@ -23,6 +27,8 @@ def get_results(query):
     # get the top 10 GIFs for the search term
     r = requests.get(
     "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (query, apikey, limit))
+    gif_json = r.json()
+    gif_str = gif_json["results"]
 
 
     if r.status_code == 200:
@@ -33,7 +39,7 @@ def get_results(query):
         top_10gifs = None
 
 
-    return render_template("index.html", top_10gifs = top_10gifs, )
+    return render_template("base.html", top_10gifs = top_10gifs)
 
 
 if __name__ == '__main__':

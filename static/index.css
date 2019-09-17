@@ -4,10 +4,15 @@ h1 {
     border-color: red;
 }
 
-p {
+h2 {
     margin-top: -100px;
     color: blue;
 }
+
+h3 {
+    color: rgba(35, 201, 220, 0.982);
+}
+
 hr {
     color: blueviolet;
 }
@@ -16,9 +21,7 @@ hr {
 
 
   /* Style the search box inside the navigation bar */
-{
-    outline: none;
-}
+
 
 html, body
 {

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+
 
 <!DOCTYPE html>
 
@@ -8,16 +8,43 @@
         <title>
                       Gif Search
         </title>
+    <style>
+      div#vlleft {
+        border-left: 8px royalblue;
+        width: 1%;
+        height: 500px;
+        position: absolute;
+        left: 30%;
+        margin-left: -20px;
+        top: 0;
+      }
+      div#vlright {
+        border-left: 8px royalblue;
+        width: 1%;
+        height: 500px;
+        position: absolute;
+        left: 70%;
+        margin-left: -20px;
+        top: 0;
+      }
+    </style>
     </head>
     <body>
         <Center>
             <h1 style="font-size: 150px;">Dorm Room Comedy</h1>
-            <p style="font-size: 50px;"><em><strong>"Laugh while you search"</strong></em></p>
-            <hr style="height:5px;border:none;color:red;background-color:lightblue;"/>
+            <h2 style="font-size: 50px;"><em><strong>Laugh while you search</strong></em></h2>
+            <hr style="height:5px;border:none;color:purple;background-color: lightblue"/>
+            <div class="vl"></div>
+            <h3>lsda;jfkldsajf</h3>
+            <div id="vlineleft">
+            </div>
+            <div id="vlineright"></div>
+
+
             <div id="cover" style="margin-top:-50px;">
                 <form method="get" action="">
                   <div class="tb">
-                    <div class="td"><input type="text" placeholder="GIF Search..." required></div>
+                    <div class="td"><input type="text" name="search_gif" placeholder="Search Gif" required></div>
                     <div class="td" id="s-cover">
                       <button type="submit">
                         <div id="s-circle"></div>
@@ -27,8 +54,8 @@
                   </div>
                 </form>
               </div>
-        </Center>
 
+        </Center>
     </body>
 </html>
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
