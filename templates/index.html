@@ -1,41 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!DOCTYPE html>
-
-<html>
-    <head>
-      <link href="{{ url_for( 'static', filename='index.css') }}" rel = 'stylesheet' type:'text/css'/>
-        <title>
-                      Gif Search
-        </title>
-    </head>
-    <body>
-        <Center>
-            <h1 style="font-size: 150px;">Dorm Room Comedy</h1>
-            <h2 style="font-size: 50px;"><em><strong>Laugh while you search</strong></em></h2>
-            <hr style="height:5px;border:none;color:purple;background-color: lightblue"/>
-            <div id="cover" style="margin-top:-50px;">
-                <form method="get" action="">
-                  <div class="tb">
-                    <div class="td"><input type="text" name="search_gif" placeholder="Search Gif" required></div>
-                    <div class="td" id="s-cover">
-                      <button type="submit">
-                        <div id="s-circle"></div>
-                        <span></span>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-                <!----------------------------------------------->
-                {% for gif in gif_str.get["results"] %}
-                  {% include "gif.html" %}
-                {% endfor %}
-              </div>
-
-        </Center>
-    </body>
-</html>
+<center>
+  <h1 style="font-size: 150px;">Dorm Room Comedy</h1>
+  <h2 style="font-size: 50px;"><em><strong>Laugh while you search</strong></em></h2>
+  <hr style="height:5px;border:none;color:purple;background-color: lightblue" />
+  <div id="cover" style="margin-top:-50px;">
+    <form action="/">
+      <div class="tb">
+        <div class="td"><input type="text" name="search_gif" placeholder="Search Gif" required></div>
+        <div class="td" id="s-cover">
+          <button type="submit">
+            <div id="s-circle"></div>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </form>
+    <!----------------------------------------------->
+    {% for gif in data %}
+    {% include "gif.html" %}
+    {% endfor %}
+  </div>
+</center>
 {% endblock %}
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 

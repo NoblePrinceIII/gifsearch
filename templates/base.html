@@ -1,44 +1,36 @@
-
-
-
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>{% block title %}GIF Search{% endblock %}</title>
+  <meta charset="utf-8">
+  <title>Gif Search</title>
+  <link href="{{ url_for( 'static', filename='index.css') }}" rel='stylesheet' type='text/css'>
 </head>
+
 <body>
   {% block content %}
-    <!-- TODO: Make a block 'body' so that the homepage can extend base -->
-
-    <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-    <link href="{{ url_for( 'static', filename='index.css') }}" rel = 'stylesheet' type:'text/css'/>
-
-
-
-
-    <Center>
-        <h1 style="font-size: 150px;">Dorm Room Comedy</h1>
-        <h2 style="font-size: 50px;"><em><strong>Laugh while you search</strong></em></he>
-        <hr style="height:5px;border:none;color:purple;background-color:lightblue;"/>
-          <div id="cover" style="margin-top:-50px;">
-            <form method="get" action="">
-              <div class="tb">
-                <div class="td"><input type="text" name="search_gif" placeholder="GIF Search..." required></div>
-                <div class="td" id="s-cover">
-                  <button type="submit">
-                    <div id="s-circle"></div>
-                    <span></span>
-                  </button>
-                </div>
-              </div>
-            </form>
+  <!-- TODO: Make a block 'body' so that the homepage can extend base -->
+  {% endblock %}
+  <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <Center>
+    <h1 style="font-size: 150px;">Dorm Room Comedy</h1>
+    <h2 style="font-size: 50px;"><em><strong>Laugh while you search</strong></em></he>
+      <hr style="height:5px;border:none;color:purple;background-color:lightblue;" />
+      <div id="cover" style="margin-top:-50px;">
+        <form method="get" action="">
+          <div class="tb">
+            <div class="td"><input type="text" name="search_gif" placeholder="GIF Search..." required></div>
+            <div class="td" id="s-cover">
+              <button type="submit">
+                <div id="s-circle"></div>
+                <span></span>
+              </button>
+            </div>
           </div>
-    </Center>
-    
+        </form>
+      </div>
+  </Center>
+</body>
 
-    {% endblock %}
-  </body>
-  </html>
-  
+</html>
