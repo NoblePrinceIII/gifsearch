@@ -20,15 +20,9 @@ def index():
 
 @app.route('/submit')
 def get_results(query):
-    # set the apikey and limit
-    apikey = "3OGJ9M5CUDUK"  # test value
-    limit = 10
+    # set the apikey and limit  
 
     # get the top 10 GIFs for the search term
-    r = requests.get(
-    "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (query, apikey, limit))
-    gif_json = r.json()
-    gif_str = gif_json["results"]
 
 
     if r.status_code == 200:

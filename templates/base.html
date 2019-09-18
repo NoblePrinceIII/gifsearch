@@ -1,32 +1,14 @@
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>GIF Search</title>
-    <style>
-        div#vlineleft {
-          border-left: 8px royalblue;
-          width: 1%;
-          height: 500px;
-          position: absolute;
-          left: 30%;
-          margin-left: -20px;
-          top: 0;
-        }
-        div#vlineright {
-          border-left: 8px royalblue;
-          width: 1%;
-          height: 500px;
-          position: absolute;
-          left: 70%;
-          margin-left: -20px;
-          top: 0;
-        }
-    </style>
+    <title>{% block title %}GIF Search{% endblock %}</title>
 </head>
 <body>
-
+  {% block content %}
     <!-- TODO: Make a block 'body' so that the homepage can extend base -->
 
     <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
@@ -40,12 +22,6 @@
         <h1 style="font-size: 150px;">Dorm Room Comedy</h1>
         <h2 style="font-size: 50px;"><em><strong>Laugh while you search</strong></em></he>
         <hr style="height:5px;border:none;color:purple;background-color:lightblue;"/>
-  
-        <h3>lsda;jfkldsajf</h3>
-        <div id="vlineleft">
-        </div>
-        <div id="vlineright">
-        </div>
           <div id="cover" style="margin-top:-50px;">
             <form method="get" action="">
               <div class="tb">
@@ -62,6 +38,7 @@
     </Center>
     
 
-
-</body>
-</html>
+    {% endblock %}
+  </body>
+  </html>
+  
