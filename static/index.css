@@ -178,9 +178,9 @@ button span:before, button span:after
     background-color: #fff;
 }
 
-#grid 
+.body_container 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1ft));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     padding: 2px;
 }
