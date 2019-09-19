@@ -1,18 +1,14 @@
 /* . for classes, # for id*/
+/*Title text color*/
 h1 {
     color: white
 }
 
+/*phrase text color*/
 h2 {
     color:white;
 }
-h3 {
-    color: rgba(35, 201, 220, 0.982);
-}
 
-hr {
-    color: blueviolet;
-}
   /* Style the search box inside the navigation bar */
 
 html, body
