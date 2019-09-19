@@ -1,7 +1,7 @@
 /* . for classes, # for id*/
 /*Title text color*/
 h1 {
-    color: white
+    color: white;
 }
 
 /*phrase text color*/
@@ -19,14 +19,9 @@ html, body
 /* Backgound Image and Color */
 body
 {
-<<<<<<< HEAD
     margin: 0;
     background-color: rgba(2, 2, 138, 0.568);
-=======
-    background-color: rgb(0,0,128);
->>>>>>> ca11bb15bea47bad23de8d485f94231b907ee556
     background-image: url(https://wallpapersite.com/images/pages/pic_h/18384.jpg);
-    margin: 0;
 }
 /* Search Bar CSS */
 .tb
