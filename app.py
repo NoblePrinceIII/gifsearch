@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 
-
+# route the function
 @app.route('/')
 def index():
     """Return homepage."""
@@ -15,8 +15,14 @@ def index():
     }
     data = None
 
-    r = requests.get("https://api.tenor.com/v1/search", params=payload)
-    if r.status_code == 200:
+
+"""
+request GET api
+receive api
+returns searched gifs
+"""
+  r = requests.get("https://api.tenor.com/v1/search", params=payload)
+   if r.status_code == 200:
         # load the GIFs using the urls for the smaller GIF sizes
         data = r.json()
         data = data["results"]
@@ -27,5 +33,6 @@ def index():
     # set the apikey and limit
 
     # get the top 10 GIFs for the search term
+    # links to terminal
 if __name__ == '__main__':
     app.run(debug=True)
