@@ -11,10 +11,11 @@ def index():
     query = request.args.get("search_gif")
     payload = {
         "q": query,
-        "key": "3OGJ9M5CUDUK"
+        "key": "3OGJ9M5CUDUK",
+        "limit" : "10"
     }
     data = None
-
+#     # sets the apikey and limit
 
 # request GET api, receive api, returns searched gifs
     r = requests.get("https://api.tenor.com/v1/search", params=payload)
@@ -26,7 +27,6 @@ def index():
         data = None
     return render_template("index.html", data=data)
 
-    # set the apikey and limit
 
     # get the top 10 GIFs for the search term
     # links to terminal
