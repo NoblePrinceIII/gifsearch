@@ -16,13 +16,9 @@ def index():
     data = None
 
 
-"""
-request GET api
-receive api
-returns searched gifs
-"""
-  r = requests.get("https://api.tenor.com/v1/search", params=payload)
-   if r.status_code == 200:
+# request GET api, receive api, returns searched gifs
+    r = requests.get("https://api.tenor.com/v1/search", params=payload)
+    if r.status_code == 200:
         # load the GIFs using the urls for the smaller GIF sizes
         data = r.json()
         data = data["results"]
