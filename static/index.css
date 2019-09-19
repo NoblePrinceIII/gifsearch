@@ -58,10 +58,11 @@ input, button
     width: 700px;
     padding: 35px;
     margin: 830px auto 0 auto;
-    background-color: #197fba;
+    background-color: #0ba0f04f;
     border-radius: 20px;
-    box-shadow: 0 10px 40px #05a3ff, 0 0 0 20px #ffffffeb;
+    box-shadow: 0 10px 40px #ffffffbb, 0 0 0 20px #ffffffad;
     transform: scale(0.6);
+
 }
 
 form
@@ -79,7 +80,7 @@ input[type="text"]
 
 input[type="text"]::placeholder
 {
-    color: #3d58ed;
+    color: #8cb5f4d7;
 }
 
 #s-cover
