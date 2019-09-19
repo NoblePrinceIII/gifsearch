@@ -11,7 +11,8 @@ def index():
     query = request.args.get("search_gif")
     payload = {
         "q": query,
-        "key": "3OGJ9M5CUDUK"
+        "key": "3OGJ9M5CUDUK",
+        "limit" : "10"
     }
     data = None
 
