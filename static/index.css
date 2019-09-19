@@ -177,3 +177,10 @@ button span:before, button span:after
     width: 40px;
     background-color: #fff;
 }
+
+#grid 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1ft));
+    padding: 2px;
+}
