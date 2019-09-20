@@ -1,24 +1,12 @@
 # How to Use This Code
+Gif Search
+This code expresses a website that searches Gifs
+In order to run this code:
+First you will have to clone or download the repository
+to use this code access go to the directory where the Code is saved
+After type: Export FLASK_ENV=development and flask run in your terminal
+you can Also type app.py in the terminal to run the program (make sure it's in the correct directory)
+The console will print out a URL link, copy and paste the link in your browser
+It will display the html provided in the Code and The user will be able to Search Gifs
 
-Install Flask:
-
-```bash
-pip3 install flask
-```
-
-Set up Flask to run in development environment:
-
-```bash
-export FLASK_ENV=development
-```
-
-Run the server:
-
-```bash
-flask run
-```
-
-You may get some errors at first, because the starter code is not complete. Don't worry; the errors are pointing you towards what needs to be done to run the project!
-
-We have added TODOs throughout the code to further help you to complete the project. Good luck!
-# gifsearch
+This Code was created by: Kento Murata Deer Brinkley and Farhan Begg
