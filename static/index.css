@@ -181,3 +181,8 @@ button span:before, button span:after
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     padding: 2px;
 }
+
+.borders
+{
+  background-color: : white;
+}
